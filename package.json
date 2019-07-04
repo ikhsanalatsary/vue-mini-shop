@@ -5,7 +5,8 @@
   "main": "gulpfile.js",
   "dependencies": {
     "vue": "^1.0.21",
-    "babelify": "^7.2.0"
+    "babelify": "^7.2.0",
+    "snyk": "^1.189.0"
   },
   "devDependencies": {
     "vueify": "^8.3.6",
@@ -21,7 +22,9 @@
     "gulp-rename": "^1.2.2"
   },
   "scripts": {
-    "dev": "gulp"
+    "dev": "gulp",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -40,5 +43,6 @@
   "bugs": {
     "url": "https://github.com/BosNaufal/vue-mini-shop/issues"
   },
-  "homepage": "https://github.com/BosNaufal/vue-mini-shop#readme"
+  "homepage": "https://github.com/BosNaufal/vue-mini-shop#readme",
+  "snyk": true
 }
